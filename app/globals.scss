@@ -76,12 +76,32 @@
 }
 
 @layer utilities {
+  .width-responsive {
+    @apply lg:mx-[10%] md:mx-[5%] mx-[2%];
+  }
+
   .root-layout {
     @apply flex h-16 items-center justify-between p-5 sm:p-8 md:hidden;
   }
 
   .navbar-layout {
-    @apply flex justify-end top-0 gap-3 p-4 bg-accent h-16 
+    @apply flex justify-end items-center top-0 gap-3 px-5 pr-4 bg-accent h-24 ;
+  }
+
+  .nav-label {
+    @apply text-lg font-bold;
+  }
+
+   .nav-link {
+     @apply text-black;
+   }
+
+  .nav-link:active {
+    @apply text-purple-900;
+  }
+
+  .nav-link:hover {
+    @apply text-purple-900;
   }
 
   .sidear-layout {
@@ -89,6 +109,6 @@
   }
 
   .main-layout {
-    @apply flex flex-col justify-center items-center;
+    @apply flex flex-col mt-3 width-responsive;
   }
 }
