@@ -84,6 +84,14 @@
     @apply flex h-16 items-center justify-between p-5 sm:p-8 md:hidden;
   }
 
+  .japanese-text {
+    @apply text-2xl font-bold;
+  }
+
+  .header-layout {
+    @apply flex items-center justify-start gap-3 bg-accent h-24;
+  }
+
   .navbar-layout {
     @apply flex justify-end items-center top-0 gap-3 px-5 pr-4 bg-accent h-24 ;
   }

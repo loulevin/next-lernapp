@@ -13,8 +13,8 @@ const notoSansJapanese = Noto_Sans_JP({ subsets: ["cyrillic", "vietnamese"] });
 const notoSans = Noto_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
-  title: "Lernapp",
-  description: "Tutorial from edward",
+  title: "Jinrai 仁雷",
+  description: "Japanese language learning platform",
 };
 
 export default function RootLayout({
