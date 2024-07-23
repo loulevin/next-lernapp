@@ -9,7 +9,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export const URL = "localhost:4202";
 
-export const fetchSingleEndpoint = async <T> (
+export const fetchSingleEndpoint = async <T>(
   endpoint: string,
   schema: ZodSchema<T>
 ): Promise<{ data: T | null; errors: ZodError | null }> => {
@@ -29,6 +29,6 @@ export const fetchSingleEndpoint = async <T> (
     if (e.response && e.response.status === 400) {
       throw new Error("404: The requested resource was not found");
     }
-    throw new Error(e)
+    throw new Error(e);
   }
 };
