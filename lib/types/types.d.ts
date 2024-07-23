@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 
-const vocabelSchema = z.object({
+const vocabelObjectSchema = z.object({
     japanese: z.string().min(1).max(10),
     reading: z.string().min(1).max(20),
     kanji: z.string().min(1).max(10),
@@ -9,10 +9,10 @@ const vocabelSchema = z.object({
     level: z.string().min(1).max(10),
 })
 
-const vocabelSchema = z.array(vocabelSchema)
+const vocabelArraySchema = z.array(vocabelObjectSchema)
 
-type vocabelType = z.infer<typeof vocabelSchema>
+type vocabelType = z.infer<typeof vocabelArraySchema>
 
-export { vocabelSchema }
+export { vocabelArraySchema as vocabelSchema }
 
 export type { vocabelType }
