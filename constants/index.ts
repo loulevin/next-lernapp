@@ -5,8 +5,13 @@ export const navbarLinks = [
     label: "Home",
   },
   {
+    imageUrl: "/images/training.svg",
+    route: "/training",
+    label: "Training",
+  },
+  {
     imageUrl: "/images/info.svg",
-    route: "/info",
-    label: "Info",
+    route: "/vocabulary",
+    label: "Vokabeln",
   },
 ];
