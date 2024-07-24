@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { fetchSingleEndpoint } from "../utils";
 import { vocabelSchema, vocabelType } from "../types/types";
 
@@ -49,3 +49,11 @@ export const lernappProvider: React.FC<ProviderProps> = ({ children }) => {
     </lernappContext.Provider>
   );
 };
+
+export const useAppContext = () => {
+    const context = useContext(lernappContext)
+    if (!context) {
+        throw new Error('useAppContext must be used within a Context Provider')
+    }
+    return context
+}

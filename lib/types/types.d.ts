@@ -1,6 +1,5 @@
 import { z } from 'zod';
 
-
 const vocabelObjectSchema = z.object({
     japanese: z.string().min(1).max(10),
     reading: z.string().min(1).max(20),
@@ -12,7 +11,8 @@ const vocabelObjectSchema = z.object({
 const vocabelArraySchema = z.array(vocabelObjectSchema)
 
 type vocabelType = z.infer<typeof vocabelArraySchema>
+type formDataType =  Record<string, string | { [key: string]: unknown} | []>
 
 export { vocabelArraySchema as vocabelSchema }
 
-export type { vocabelType }
+export type { vocabelType, formDataType }
