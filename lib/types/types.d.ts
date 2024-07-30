@@ -11,7 +11,7 @@ const vocabelObjectSchema = z.object({
 const vocabelArraySchema = z.array(vocabelObjectSchema)
 
 type vocabelType = z.infer<typeof vocabelArraySchema>
-type formDataType =  Record<string, string | { [key: string]: unknown} | []>
+type formDataType = Record<string, string | { [key: string]: unknown} | []>
 
 export { vocabelArraySchema as vocabelSchema }
 
