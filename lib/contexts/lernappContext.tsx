@@ -1,3 +1,5 @@
+'use client'
+
 import { createContext, useContext, useEffect, useState } from "react";
 import { fetchSingleEndpoint } from "../utils";
 import { vocabelSchema, vocabelType } from "../types/types";

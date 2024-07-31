@@ -1,5 +1,7 @@
+'use client'
+
 import { IVocabel } from "@/lib/interfaces";
-import { useState, useEffect } from "react"; // Import useEffect from react
+import { useState, useEffect } from "react"; 
 import * as config from "@/lib/config"
 import axios from "axios";
 
