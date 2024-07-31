@@ -119,4 +119,12 @@
   .main-layout {
     @apply flex flex-col mt-3 width-responsive;
   }
+
+  .icons-layout-green {
+    @apply flex justify-between items-center gap-3 cursor-pointer text-gray-700 hover:text-green-500;
+  }
+
+  .icons-layout-red {
+    @apply flex justify-between items-center gap-3 cursor-pointer text-gray-700 hover:text-red-500;
+  }
 }

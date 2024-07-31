@@ -12,6 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { FaPencilAlt, FaTrashAlt } from "react-icons/fa";
 
 export default function vocabeltraining() {
   const [vocabel, setVocabel] = useState<IVocabel[]>([]);
@@ -27,22 +28,29 @@ export default function vocabeltraining() {
   return (
     <>
       <h1>Vokabeln</h1>
-    
-
-      <Table>
+      <Table className="bg-teal-200 w-[">
         <TableHeader>
           <TableHead>Japanisch</TableHead>
           <TableHead>Lesung</TableHead>
           <TableHead>Kanji</TableHead>
           <TableHead>Deutsche Übersetzung</TableHead>
+          <TableHead>Level</TableHead>
+          <TableHead className="">Bearbeitung</TableHead>
         </TableHeader>
         <TableBody>
           {vocabel.map((vocabel, index) => (
             <TableRow key={index}>
-              <TableCell>{vocabel.japanese}</TableCell>
+              <TableCell className="font-semibold">
+                {vocabel.japanese}
+              </TableCell>
               <TableCell>{vocabel.reading}</TableCell>
               <TableCell>{vocabel.kanji}</TableCell>
               <TableCell>{vocabel.translate}</TableCell>
+              <TableCell>{vocabel.level}</TableCell>
+              <TableCell className="flex justify-end gap-2">
+                <FaPencilAlt className="icons-layout-green" />{" "}
+                <FaTrashAlt className="icons-layout-red" />
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
