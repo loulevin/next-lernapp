@@ -22,7 +22,7 @@ export default function training() {
       <h1>Training</h1>
       {vocabel.map((vocabel, index) => {
         return (
-          <Card key={index} className="w-[35rem] bg-slate-400">
+          <Card key={index} className="w-[35rem] bg-slate-400 mx-auto">
             <CardHeader>
               <CardTitle className="text-center bg-teal-500 p-4 gap-2">{vocabel.japanese}</CardTitle>
             </CardHeader>

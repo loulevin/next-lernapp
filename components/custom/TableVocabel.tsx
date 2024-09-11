@@ -24,7 +24,7 @@ export default function TableVocabel() {
     }, []);
   return (
     <>
-      <Table className="bg-teal-200 w-[40rem]">
+      <Table className="bg-teal-200 w-[40rem] w-auto mx-auto">
         <TableHeader>
           <TableHead>Japanisch</TableHead>
           <TableHead>Lesung</TableHead>
