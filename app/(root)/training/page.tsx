@@ -24,7 +24,7 @@ export default function training() {
         return (
           <Card key={index} className="w-[35rem] bg-slate-400">
             <CardHeader>
-              <CardTitle className="text-center bg-teal-500 p-4">{vocabel.japanese}</CardTitle>
+              <CardTitle className="text-center bg-teal-500 p-4 gap-2">{vocabel.japanese}</CardTitle>
             </CardHeader>
           </Card>
         );
